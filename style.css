@@ -4,8 +4,12 @@
   /* Light theme*/
   --bg-color: #e3e4f1;
   --border-check-color: #e3e4f1;
+  --footer-color: #9495a5;
   --gradient-color-1: hsl(192, 100%, 67%);
   --gradient-color-2: hsl(280, 87%, 65%);
+
+  --todo-font-color: #494c6b;
+  --border-r: 5px;
 }
 
 html {
@@ -37,16 +41,16 @@ picture {
 
 /* utilitie class */
 
-:has(input[type="checkbox"]:hover) .gradient {
+/* :has(input[type="checkbox"]:hover) .gradient {
   background: linear-gradient(
     140deg,
     var(--gradient-color-1),
     var(--gradient-color-2)
   );
-}
+} */
 
 .gradient {
-  border: thin solid var(--bg-color);
+  border: thin solid var(--border-check-color);
   border-radius: 50%;
   /* background: linear-gradient(
     140deg,
@@ -66,37 +70,6 @@ picture {
   border-radius: 50%;
   cursor: pointer;
 }
-
-/* .gradient::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  background: linear-gradient(
-    140deg,
-    var(--gradient-color-1),
-    var(--gradient-color-2)
-  );
-  height: 1.55rem;
-  width: 1.55rem;
-} */
-
-/* .check-todo {
-  appearance: none;
-  border: thin solid var(--bg-color);
-  border-radius: 50%;
-  height: 1.5rem;
-  width: 1.5rem;
-  cursor: pointer;
-} */
-
-/* .check-todo:hover {
-  border-image: linear-gradient(
-      45deg,
-      var(--gradient-color-1),
-      var(--gradient-color-2)
-    )
-    1;
-} */
 
 .flex {
   display: flex;
@@ -128,17 +101,68 @@ picture {
 
 .todo-form {
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: var(--border-r);
   margin-top: 2.5rem;
   padding: 20px 1.5rem;
   width: 100%;
 }
 
 .todo-input {
+  border: none;
+  caret-color: #3a7cfd;
+  color: #393a4b;
   font-size: 18px;
   font-family: inherit;
-  border: none;
   outline: none;
+}
+
+.todo-content {
+  background-color: #fff;
+  border-radius: var(--border-r);
+  margin-top: 1.5rem;
+}
+
+.todo {
+  border-bottom: thin solid var(--border-check-color);
+  color: var(--todo-font-color);
+  font-size: 18px;
+}
+
+.todo img {
+  cursor: pointer;
+  height: 1.2rem;
+  margin-left: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 1.2rem;
+}
+
+.todo:hover img {
+  opacity: 1;
+}
+
+.todo,
+.todo-footer {
+  padding: 20px 1.5rem;
+}
+
+.todo-footer {
+  color: var(--footer-color);
+  font-size: 0.875rem;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 18px;
+}
+
+.show-todo {
+  font-weight: bold;
+}
+
+.info-msj {
+  font-size: 0.875rem;
+  color: var(--footer-color);
+  margin-top: 3rem;
+  text-align: center;
 }
 
 .attribution {

@@ -24,6 +24,7 @@
         <h1>Todo</h1>
         <img src="./images/icon-moon.svg" alt="" class="theme-icon">
       </header>
+
       <form class="todo-form flex">
         <label for="checkbox" class="gradient flex">
           <input type="checkbox" class="check-todo" id="checkbox">
@@ -32,20 +33,48 @@
         <input type="text" class="todo-input" placeholder="Create a new todo...">
       </form>
 
-      <div class="todo-content">
-        <div class="todo">
+      <div class="todo-content" id="todo-content">
+        <div class="todo flex">
           <label class="gradient flex">
             <input type="checkbox" id="" class="check-todo">
           </label>
           <p class="todo-description">Complete online JavaScript course</p>
           <img src="./images/icon-cross.svg" alt="clear todo">
         </div>
-        <footer>
+        <div class="todo flex">
+          <label class="gradient flex">
+            <input type="checkbox" id="" class="check-todo">
+          </label>
+          <p class="todo-description">Complete online JavaScript course</p>
+          <img src="./images/icon-cross.svg" alt="clear todo">
+        </div>
+        <div class="todo flex">
+          <label class="gradient flex">
+            <input type="checkbox" id="" class="check-todo">
+          </label>
+          <p class="todo-description">Complete online JavaScript course</p>
+          <img src="./images/icon-cross.svg" alt="clear todo">
+        </div>
+        <div class="todo flex">
+          <label class="gradient flex">
+            <input type="checkbox" id="" class="check-todo">
+          </label>
+          <p class="todo-description">Complete online JavaScript course</p>
+          <img src="./images/icon-cross.svg" alt="clear todo">
+        </div>
+        <div class="todo flex">
+          <label class="gradient flex">
+            <input type="checkbox" id="" class="check-todo">
+          </label>
+          <p class="todo-description">Complete online JavaScript course</p>
+          <img src="./images/icon-cross.svg" alt="clear todo">
+        </div>
+        <footer class="flex todo-footer">
           <p>items left</p>
           <div class="show-todo">
             <label for="all">
               All
-              <input type="radio" name="show" id="all">
+              <input type="radio" checked name="show" id="all">
             </label>
             <label for="active">
               Active
@@ -59,9 +88,8 @@
           <p>Clear Completed</p>
         </footer>
       </div>
+      <p class="info-msj">Drag and drop to reorder list</p>
     </div>
-
-
   </main>
 
 
@@ -74,7 +102,7 @@
 
 
 
-  Drag and drop to reorder list
+
 
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
