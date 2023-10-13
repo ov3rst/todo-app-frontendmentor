@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+:root {
+  /* Light theme*/
+  --bg-color: #e3e4f1;
+  --border-check-color: #e3e4f1;
+  --gradient-color-1: hsl(192, 100%, 67%);
+  --gradient-color-2: hsl(280, 87%, 65%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Josefin Sans";
+}
+
+img {
+  width: 100%;
+}
+
+picture {
+  position: relative;
+  z-index: -2;
+}
+
+/* utilitie class */
+
+:has(input[type="checkbox"]:hover) .gradient {
+  background: linear-gradient(
+    140deg,
+    var(--gradient-color-1),
+    var(--gradient-color-2)
+  );
+}
+
+.gradient {
+  border: thin solid var(--bg-color);
+  border-radius: 50%;
+  /* background: linear-gradient(
+    140deg,
+    var(--gradient-color-1),
+    var(--gradient-color-2)
+  ); */
+  height: 1.5rem;
+  width: 1.5rem;
+  justify-content: center;
+}
+
+.check-todo {
+  appearance: none;
+  width: 1.35rem;
+  height: 1.35rem;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* .gradient::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(
+    140deg,
+    var(--gradient-color-1),
+    var(--gradient-color-2)
+  );
+  height: 1.55rem;
+  width: 1.55rem;
+} */
+
+/* .check-todo {
+  appearance: none;
+  border: thin solid var(--bg-color);
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+} */
+
+/* .check-todo:hover {
+  border-image: linear-gradient(
+      45deg,
+      var(--gradient-color-1),
+      var(--gradient-color-2)
+    )
+    1;
+} */
+
+.flex {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+/* utilitie class */
+.todo-container {
+  position: relative;
+  max-width: 540px;
+  margin-inline: auto;
+  margin-top: -13.5rem;
+}
+
+.todo-header h1 {
+  color: white;
+  display: inline-block;
+  font-size: 2.5rem;
+  letter-spacing: 15px;
+  margin-right: 20.59rem;
+  text-transform: uppercase;
+}
+
+.todo-header img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.todo-form {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 2.5rem;
+  padding: 20px 1.5rem;
+  width: 100%;
+}
+
+.todo-input {
+  font-size: 18px;
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

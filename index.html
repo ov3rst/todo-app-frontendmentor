@@ -1,36 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | Todo app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <main>
+    <picture>
+      <source srcset="./images/bg-mobile-light.jpg" media="(max-width: 375px)">
+      <img src="./images/bg-desktop-light.jpg" alt="bg light">
+    </picture>
 
-  Todo
+    <div class="todo-container">
+      <header class="todo-header">
+        <h1>Todo</h1>
+        <img src="./images/icon-moon.svg" alt="" class="theme-icon">
+      </header>
+      <form class="todo-form flex">
+        <label for="checkbox" class="gradient flex">
+          <input type="checkbox" class="check-todo" id="checkbox">
+          <!-- <div class="white-content"></div> -->
+        </label>
+        <input type="text" class="todo-input" placeholder="Create a new todo...">
+      </form>
 
-  <!-- Add dynamic number --> items left
+      <div class="todo-content">
+        <div class="todo">
+          <label class="gradient flex">
+            <input type="checkbox" id="" class="check-todo">
+          </label>
+          <p class="todo-description">Complete online JavaScript course</p>
+          <img src="./images/icon-cross.svg" alt="clear todo">
+        </div>
+        <footer>
+          <p>items left</p>
+          <div class="show-todo">
+            <label for="all">
+              All
+              <input type="radio" name="show" id="all">
+            </label>
+            <label for="active">
+              Active
+              <input type="radio" name="show" id="active">
+            </label>
+            <label for="completed">
+              Completed
+              <input type="radio" name="show" id="completed">
+            </label>
+          </div>
+          <p>Clear Completed</p>
+        </footer>
+      </div>
+    </div>
 
-  All
-  Active 
-  Completed
 
-  Clear Completed
+  </main>
+
+
+
+
+
+
+
+
+
+
 
   Drag and drop to reorder list
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Ov3rst</a>.
+  </div> -->
 </body>
+
 </html>
